@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MyBank</string>
+    <string name="welcome_mybank">Welcome MyBank</string>
+    <string name="tel">Tel</string>
+    <string name="password">Password*</string>
+    <string name="login">Login*</string>
+    <string name="fullName">fullName</string>
+    <string name="SignUp">SignUp</string>
+    <string name="txtSignIn">SignIn</string>
+    <string name="signup">I don\'t have account?</string>
+    <string name="signin">I have account?</string>
+    <string name="adress">Address</string>
+    <string name="Login">Login</string>
+    <string name="forgot_password">forgot_password</string>
+    <string name="home">Home</string>
+    <string name="retrait">Retrait</string>
+    <string name="virement">Virement</string>
+    <string name="contact">Contact</string>
+    <string name="numCompte">Numéro de compte</string>
+    <string name="montant_retirer">Montant à retirer</string>
+    <string name="montant_d_poser">Montant à déposer</string>
+    <string name="numero_emetteur">Numero émetteur</string>
+    <string name="numero_recepteur">Numero de récepteur</string>
+    <string name="montant_virer">montant à transférer</string>
+    <string name="valider">Valider</string>
+    <string name="retour">Retour</string>
+    <string name="new_client">S\'inscriree un nouveau client</string>
+    <string name="liste_clients">Liste des clients</string>
+    <string name="solde">Solde:</string>
+    <string-array name="sexe">
+        <item>Sexe</item>
+        <item>M</item>
+        <item>F</item>
+    </string-array>
+</resources>

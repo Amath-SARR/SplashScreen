@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/drawable-v24/form1.xml" value="0.23692307692307693" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/drawable-v24/navbar_icon_color.xml" value="0.12604166666666666" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/drawable/form.xml" value="0.11510416666666666" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23692307692307693" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/font/bangers.xml" value="0.1935185185185185" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/font/poppins.xml" value="0.10555555555555556" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/layout/activity_acceuil.xml" value="0.18" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/layout/activity_depot.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/layout/activity_espace_admin.xml" value="0.14" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/layout/activity_main.xml" value="0.1381340579710145" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/layout/activity_retrait.xml" value="0.1" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/layout/activity_sign_up.xml" value="0.2959830866807611" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/layout/activity_signup.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/layout/activity_splashscreen2.xml" value="0.1381340579710145" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/layout/activity_virement.xml" value="0.14" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/menu/bottom_navigation.xml" value="0.10989583333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
