@@ -85,7 +85,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:text="Valider" />
+                android:text="@string/valider" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

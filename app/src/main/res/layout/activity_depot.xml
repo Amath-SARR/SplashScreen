@@ -31,7 +31,7 @@
                 android:background="@color/teal_200"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent" >
 
                 <Button
                     android:id="@+id/retour"
@@ -39,7 +39,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/retour" />
             </FrameLayout>
-
 
             <ImageView
                 android:id="@+id/shape"
@@ -54,17 +53,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0" />
 
-            <EditText
-                android:id="@+id/numCompte"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:hint="@string/numCompte"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
 
             <EditText
                 android:id="@+id/montant_deposer"
@@ -73,7 +61,19 @@
                 android:ems="10"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:hint="@string/montant_d_poser"
+                android:hint="@string/montantDeposer"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/montant_retirer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:hint="@string/montant_retirer"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
 
@@ -81,11 +81,11 @@
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:text="Valider" />
+                android:text="@string/valider" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

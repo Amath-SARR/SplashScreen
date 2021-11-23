@@ -4,7 +4,7 @@
     <string name="tel">Tel</string>
     <string name="password">Password*</string>
     <string name="login">Login*</string>
-    <string name="fullName">fullName</string>
+    <string name="fullName">fullName*</string>
     <string name="SignUp">SignUp</string>
     <string name="txtSignIn">SignIn</string>
     <string name="signup">I don\'t have account?</string>
@@ -18,15 +18,16 @@
     <string name="contact">Contact</string>
     <string name="numCompte">Numéro de compte</string>
     <string name="montant_retirer">Montant à retirer</string>
-    <string name="montant_d_poser">Montant à déposer</string>
+    <string name="montantDeposer">Montant à déposer</string>
     <string name="numero_emetteur">Numero émetteur</string>
     <string name="numero_recepteur">Numero de récepteur</string>
     <string name="montant_virer">montant à transférer</string>
-    <string name="valider">Valider</string>
     <string name="retour">Retour</string>
     <string name="new_client">S\'inscriree un nouveau client</string>
     <string name="liste_clients">Liste des clients</string>
     <string name="solde">Solde:</string>
+    <string name="valider">Valider</string>
+    <string name="todo">TODO</string>
     <string-array name="sexe">
         <item>Sexe</item>
         <item>M</item>
