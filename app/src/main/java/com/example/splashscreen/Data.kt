@@ -8,6 +8,5 @@ class Data {
     var adress: String = ""
     var sexe: String = ""
 
-    var montant: String = ""
-    var numero_compte: String = ""
+    var solde: Double? = null
 }

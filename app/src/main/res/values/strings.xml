@@ -13,6 +13,7 @@
     <string name="Login">Login</string>
     <string name="forgot_password">forgot_password</string>
     <string name="home">Home</string>
+    <string name="depot">Depot</string>
     <string name="retrait">Retrait</string>
     <string name="virement">Virement</string>
     <string name="contact">Contact</string>
@@ -28,8 +29,11 @@
     <string name="solde">Solde:</string>
     <string name="valider">Valider</string>
     <string name="todo">TODO</string>
+    <string name="accept">Accept Contract</string>
+    <string name="sexe">Sexe</string>
+    <string name="deconnecter">Se Deconnecter</string>
+    <string name="search">Search</string>
     <string-array name="sexe">
-        <item>Sexe</item>
         <item>M</item>
         <item>F</item>
     </string-array>

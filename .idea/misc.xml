@@ -5,13 +5,21 @@
       <map>
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/drawable/form.xml" value="0.10729166666666666" />
-        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_acceuil.xml" value="0.22" />
-        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_depot.xml" value="0.1" />
-        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_espace_admin.xml" value="0.1" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_acceuil.xml" value="0.18" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_depot.xml" value="0.18" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_espace_admin.xml" value="0.25" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_item_client.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_list_client.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_main.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_retrait.xml" value="0.1" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_sign_up.xml" value="0.27225806451612905" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_splashscreen2.xml" value="0.1" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_virement.xml" value="0.1" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/dialog_forgot_password.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/item_client.xml" value="0.21" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/menu/bottom_navigation.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/menu/menu_item.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.12604166666666666" />
         <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/drawable-v24/form1.xml" value="0.23692307692307693" />
         <entry key="..\:/Users/El. A. SARR/Desktop/SplashScreen-master/app/src/main/res/drawable-v24/navbar_icon_color.xml" value="0.12604166666666666" />

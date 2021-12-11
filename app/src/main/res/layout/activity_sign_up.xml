@@ -26,7 +26,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
                 <ImageView
                     android:id="@+id/shape"
@@ -38,7 +39,8 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0" />
+                    app:layout_constraintVertical_bias="0"
+                    android:contentDescription="TODO" />
 
                 <ImageView
                     android:id="@+id/imglogin"
@@ -46,118 +48,168 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/login" />
 
-                <EditText
-                    android:id="@+id/fullName"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/form1"
-                    android:drawableStart="@drawable/ic_personne"
-                    android:ems="10"
-                    android:hint="@string/fullName"
-                    android:importantForAutofill="no"
-                    android:inputType="textPassword"
-                    android:minHeight="48dp"
-                    android:paddingStart="30dp" />
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/login"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/form1"
-                    android:drawableStart="@drawable/ic_email"
-                    android:ems="10"
-                    android:hint="@string/login"
-                    android:importantForAutofill="no"
-                    android:inputType="textEmailAddress"
-                    android:minHeight="48dp"
-                    android:paddingStart="30dp" />
+                    <EditText
+                        android:id="@+id/fullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
 
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/form1"
-                    android:drawableStart="@drawable/ic_lock"
-                    android:ems="10"
-                    android:hint="@string/password"
-                    android:importantForAutofill="no"
-                    android:inputType="textPassword"
-                    android:minHeight="48dp"
-                    android:paddingStart="30dp" />
+                        android:background="@drawable/form1"
+                        android:drawableStart="@drawable/ic_personne"
+                        android:ems="10"
+                        android:hint="@string/fullName"
+                        android:importantForAutofill="no"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:paddingStart="30dp"
+                        tools:ignore="RtlSymmetry" />
 
-                <EditText
-                    android:id="@+id/tel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/form1"
-                    android:drawableStart="@drawable/ic_phone1"
-                    android:ems="10"
-                    android:hint="@string/tel"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:paddingStart="30dp" />
+                    <EditText
+                        android:id="@+id/login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
 
-                <EditText
-                    android:id="@+id/adress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/form1"
-                    android:drawableStart="@drawable/ic_address"
-                    android:ems="10"
-                    android:hint="@string/adress"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:layout_marginRight="20dp"
-                    android:paddingStart="30dp" />
+                        android:background="@drawable/form1"
+                        android:drawableStart="@drawable/ic_email"
+                        android:ems="10"
+                        android:hint="@string/login"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:minHeight="48dp"
+                        android:paddingStart="30dp"
+                        tools:ignore="RtlSymmetry" />
 
-                <Spinner
-                    android:id="@+id/sexe"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:entries="@array/sexe"
-                    android:minHeight="48dp"
-                    android:paddingStart="30dp" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
-                <Button
-                    android:id="@+id/btnSignUp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="@string/SignUp"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:background="@drawable/form1"
-                    tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
-                <TextView
-                    android:id="@+id/question"
-                    android:layout_width="200dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/signin"
-                    android:textColor="@color/black"
-                    android:textSize="15dp" />
+                        app:passwordToggleEnabled="true">
 
-                <TextView
-                    android:id="@+id/txtSignIn"
-                    android:layout_width="298dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/txtSignIn"
-                    android:gravity="right"
-                    android:textColor="@color/statusbar"
-                    android:textSize="15sp" />
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/form1"
+                            android:drawableStart="@drawable/ic_lock"
+                            android:ems="10"
+                            android:hint="@string/password"
+                            android:importantForAutofill="no"
+                            android:inputType="textPassword"
+                            android:paddingStart="30dp"
+                            tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <EditText
+                        android:id="@+id/tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/form1"
+                        android:drawableStart="@drawable/ic_phone1"
+                        android:ems="10"
+                        android:hint="@string/tel"
+                        android:inputType="number"
+                        android:minHeight="48dp"
+                        android:paddingStart="30dp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <EditText
+                        android:id="@+id/adress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/form1"
+                        android:drawableStart="@drawable/ic_address"
+                        android:ems="10"
+                        android:hint="@string/adress"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:paddingStart="30dp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:layout_width="392dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:textSize="20dp"
+                            android:text="@string/sexe"/>
+
+                        <Spinner
+                            android:id="@+id/sexe"
+                            android:layout_width="68dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/sexe"
+                            android:minHeight="48dp"
+                            android:paddingStart="30dp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <Switch
+                            android:id="@+id/switch1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:text="@string/accept"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="@string/SignUp"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:background="@drawable/form1"
+                        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/question"
+                            android:layout_width="200dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/signin"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            tools:ignore="RtlSymmetry"/>
+
+                        <TextView
+                            android:id="@+id/txtSignIn"
+                            android:layout_width="68dp"
+                            android:layout_marginStart="-90dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txtSignIn"
+                            android:textColor="@color/statusbar"
+                            android:textSize="15sp" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar2"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

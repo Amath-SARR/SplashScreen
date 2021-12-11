@@ -3,49 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
+        <data>
 
-    </data>
+        </data>
+        <androidx.constraintlayout.widget.ConstraintLayout
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".EspaceAdmin">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".EspaceAdmin">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:menu="@menu/menu_item"/>
 
-        <Button
-            android:id="@+id/client"
-            android:layout_width="150dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="100dp"
-            android:text="@string/new_client"
-            tools:ignore="MissingConstraints" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="568dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="178dp"
+                    tools:listitem="@layout/item_client">
 
-        <ImageView
-            android:id="@+id/shape"
-            android:layout_width="414dp"
-            android:layout_height="487dp"
-            android:layout_marginTop="-300dp"
-            android:src="@drawable/admin"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            app:layout_constraintVertical_bias="0" />
-
-        <TextView
-            android:id="@+id/liste"
-            android:layout_width="298dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="-200dp"
-            android:text="@string/liste_clients"
-            android:textColor="@color/orange"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shape" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

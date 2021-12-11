@@ -53,9 +53,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0" />
 
-
             <EditText
-                android:id="@+id/montant_deposer"
+                android:id="@+id/montantDeposer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -63,23 +62,21 @@
                 android:layout_marginRight="50dp"
                 android:hint="@string/montantDeposer"
                 android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:autofillHints="" />
+                android:minHeight="48dp"/>
 
             <EditText
-                android:id="@+id/montant_retirer"
+                android:id="@+id/numeroCompte"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:hint="@string/montant_retirer"
+                android:hint="NumeroCompte"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
 
-
             <Button
-                android:id="@+id/button"
+                android:id="@+id/deposer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
