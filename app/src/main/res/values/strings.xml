@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">MyBank</string>
-    <string name="welcome_mybank">Welcome MyBank</string>
+    <string name="welcome_mybank">Welcome MyBank!</string>
     <string name="tel">Tel</string>
     <string name="password">Password*</string>
     <string name="login">Login*</string>
@@ -29,12 +29,16 @@
     <string name="solde">Solde:</string>
     <string name="valider">Valider</string>
     <string name="todo">TODO</string>
-    <string name="accept">Accept Contract</string>
     <string name="sexe">Sexe</string>
     <string name="deconnecter">Se Deconnecter</string>
     <string name="search">Search</string>
+    <string name="faire_un_retrait">Faire un retrait</string>
+    <string name="currently_login">please your currently login</string>
     <string-array name="sexe">
         <item>M</item>
         <item>F</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trending_tags">Search</string>
 </resources>

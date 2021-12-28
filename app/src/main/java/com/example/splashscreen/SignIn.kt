@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.widget.EditText
@@ -63,24 +64,16 @@ class SignIn : AppCompatActivity() {
                 binding.password.error = "Le password doit contenir 8 caractères de votre choix"
                 return@setOnClickListener
             } else {
-
                 binding.progressBar.setVisibility(View.VISIBLE)
                 fAuth.signInWithEmailAndPassword(mail,mdp).addOnSuccessListener {
-                val user = it.user
-
-                checkProfile(user!!.uid)
-
-                //intent.putExtra("email_id", data)
+                    val user = it.user
+                    checkProfile(user!!.uid)
                 }.addOnFailureListener {
-                    println(it.message)
+                    binding.progressBar.setVisibility(View.INVISIBLE)
+                    Toast.makeText(this, "Please the mdp/login is incorrect ", Toast.LENGTH_LONG).show()
                 }
-
-
             }
          }
-
-        //Reset a new password
-
        }
 
       fun checkProfile(uid: String) {
@@ -88,8 +81,8 @@ class SignIn : AppCompatActivity() {
         df.get().addOnSuccessListener {
             if(it["isAdmin"]!=null){
                 Toast.makeText(this@SignIn, "Success!", Toast.LENGTH_SHORT).show()
-                Toast.makeText(this@SignIn, "Success!", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this@SignIn,EspaceAdmin::class.java)
+                intent.putExtra("name", it["fullName"].toString())
                 startActivity(intent)
                 finish()
             }
@@ -99,7 +92,7 @@ class SignIn : AppCompatActivity() {
                 val intent = Intent(this@SignIn,Acceuil::class.java)
                 intent.putExtra("name", it["fullName"].toString())
                 intent.putExtra("solde", it["solde"].toString())
-                intent.putExtra("email_id", it["login"].toString())
+                intent.putExtra("uid", it["uid"].toString())
                 startActivity(intent)
                 finish()
             }

@@ -3,21 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/drawable-anydpi/ic_add.xml" value="0.240625" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/drawable-anydpi/ic_sac.xml" value="0.2" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/drawable-v24/form1.xml" value="0.240625" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/drawable/form.xml" value="0.10729166666666666" />
-        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_acceuil.xml" value="0.18" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_acceuil.xml" value="0.25" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_client_list.xml" value="0.21" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_depot.xml" value="0.18" />
-        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_espace_admin.xml" value="0.25" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_espace_admin.xml" value="0.15" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_item_client.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_list_client.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_main.xml" value="0.19701086956521738" />
-        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_retrait.xml" value="0.1" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_retrait.xml" value="0.18" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
-        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_sign_up.xml" value="0.27225806451612905" />
-        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_splashscreen2.xml" value="0.1" />
-        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_virement.xml" value="0.1" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_splashscreen2.xml" value="0.25" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/activity_virement.xml" value="0.2959738846572361" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/contact.xml" value="0.21" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/custom_toast.xml" value="0.10916919959473151" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/dialog_forgot_password.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/fragment_search.xml" value="0.10916919959473151" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/item_client.xml" value="0.21" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/search_fragment.xml" value="0.18" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/search_toobar.xml" value="0.25" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/suggestion_item.xml" value="0.12318840579710146" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/suggestion_textview_item.xml" value="0.6452095808383234" />
+        <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/layout/update_popup.xml" value="0.25" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/menu/bottom_navigation.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/menu/menu_item.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/El. A. SARR/Desktop/MyBank/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.12604166666666666" />

@@ -28,24 +28,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="73dp"
                 android:layout_marginBottom="79dp"
-                android:background="@color/teal_200"
+                android:background="@color/statusbar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" >
 
-                <Button
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
                     android:id="@+id/retour"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/retour" />
+                    android:src="@drawable/ic_retour"/>
             </FrameLayout>
 
             <ImageView
                 android:id="@+id/shape"
-                android:layout_width="350dp"
-                android:layout_height="500dp"
+                android:layout_width="316dp"
+                android:layout_height="384dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="-100dp"
+                android:contentDescription="TODO"
                 android:src="@drawable/ic_vire"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +56,7 @@
                 app:layout_constraintVertical_bias="0" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnVirement"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-55dp"
@@ -83,10 +84,11 @@
                 android:layout_marginRight="50dp"
                 android:hint="@string/numero_recepteur"
                 android:inputType="textPersonName"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:autofillHints="" />
 
             <EditText
-                android:id="@+id/montant_virer"
+                android:id="@+id/montantVirer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -94,8 +96,9 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:hint="@string/montant_virer"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:autofillHints="" />
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
