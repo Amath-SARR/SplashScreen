@@ -53,6 +53,16 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0" />
 
+            <EditText
+                android:id="@+id/montantRetirer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:hint="@string/montant_retirer"
+                android:inputType="number"
+                android:minHeight="48dp" />
 
             <EditText
                 android:id="@+id/numeroCompte"
@@ -62,17 +72,6 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:hint="@string/numCompte"
-                android:inputType="textPersonName"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/montantRetirer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:hint="@string/montant_retirer"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
 

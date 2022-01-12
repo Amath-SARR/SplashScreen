@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
-import java.security.AccessController.getContext
+
 
 class Acceuil: AppCompatActivity() {
     lateinit var storage: FirebaseStorage
@@ -91,6 +91,11 @@ class Acceuil: AppCompatActivity() {
                     startActivity(intent)
                     return@setOnNavigationItemSelectedListener true
                 }
+                R.id.contact -> {
+                    val intent = Intent(this, Contact::class.java)
+                    startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
+                }
 
                 else -> false
             }
@@ -116,4 +121,5 @@ class Acceuil: AppCompatActivity() {
         }
     }
 }
+
 

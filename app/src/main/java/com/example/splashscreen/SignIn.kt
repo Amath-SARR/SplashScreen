@@ -1,10 +1,8 @@
 package com.example.splashscreen
 
-import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.widget.EditText
@@ -31,18 +29,20 @@ class SignIn : AppCompatActivity() {
         }
 
         binding.forgot.setOnClickListener {
-
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("Forgot Password")
+            builder.setTitle("Veuillez sasir votre email courant!! ")
             val view = layoutInflater.inflate(R.layout.dialog_forgot_password, null)
-            val login = view.findViewById<EditText>(R.id.login)
+            val login = view.findViewById<EditText>(R.id.login_reset)
             builder.setView(view)
             builder.setPositiveButton("Reset") { _, _, ->
                 forgotPassword(login)
             }
             builder.setNegativeButton("Close") { _, _, ->
-                builder.show()
+
             }
+            val dialog = builder.create()
+            dialog.setIcon(R.drawable.bienvenu)
+            dialog.show()
         }
 
         //Verification validité du formulaire
@@ -64,8 +64,10 @@ class SignIn : AppCompatActivity() {
                 binding.password.error = "Le password doit contenir 8 caractères de votre choix"
                 return@setOnClickListener
             } else {
+
                 binding.progressBar.setVisibility(View.VISIBLE)
                 fAuth.signInWithEmailAndPassword(mail,mdp).addOnSuccessListener {
+                    Toast.makeText(this, "Succes", Toast.LENGTH_LONG).show()
                     val user = it.user
                     checkProfile(user!!.uid)
                 }.addOnFailureListener {
@@ -80,7 +82,7 @@ class SignIn : AppCompatActivity() {
         val df = fStore.collection("Users").document(uid)
         df.get().addOnSuccessListener {
             if(it["isAdmin"]!=null){
-                Toast.makeText(this@SignIn, "Success!", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@SignIn, "Success!", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this@SignIn,EspaceAdmin::class.java)
                 intent.putExtra("name", it["fullName"].toString())
                 startActivity(intent)
@@ -101,7 +103,7 @@ class SignIn : AppCompatActivity() {
             }
         }
       }
-
+    //Fonction pour changer un mdp oublié
     private fun forgotPassword(login: EditText){
 
         if (login.text.toString().isEmpty()) {
@@ -110,15 +112,17 @@ class SignIn : AppCompatActivity() {
         if (!Patterns.EMAIL_ADDRESS.matcher(login.text.toString()).matches()) {
             return
         }
-        fAuth.sendPasswordResetEmail(login.text.toString()).addOnCompleteListener(){
+        fAuth.sendPasswordResetEmail(login.text.toString())
+            .addOnCompleteListener(){
 
-            task -> if (task.isSuccessful){
-                Toast.makeText(this, "Un mail a été envoyé sur ce email veuillez le vérifié! ", Toast.LENGTH_SHORT).show()
+                task -> if (task.isSuccessful) {
+                    Toast.makeText(this, "Un mail a été envoyé sur ce email veuillez le vérifié! ", Toast.LENGTH_SHORT).show()
 
+                }
             }
-        }
     }
 }
+
 
 
 

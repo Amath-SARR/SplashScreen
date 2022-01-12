@@ -1,11 +1,13 @@
 package com.example.splashscreen
 
-import android.content.Intent
+import android.Manifest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.telephony.SmsManager
 import android.util.Patterns
 import android.view.View
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
 import com.example.splashscreen.databinding.ActivitySignUpBinding
 import com.google.android.gms.tasks.OnCompleteListener
@@ -17,7 +19,6 @@ import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 
 class SignUp : AppCompatActivity() {
-    lateinit var fStore : FirebaseFirestore
     override fun onCreate(savedInstanceState: Bundle?) {
         lateinit var binding: ActivitySignUpBinding
         val fAuth = FirebaseAuth.getInstance()
@@ -29,9 +30,9 @@ class SignUp : AppCompatActivity() {
 
         //Boutton vers Activité de SignIn
         binding.txtSignIn.setOnClickListener {
-            val intent = Intent(this, SignIn::class.java)
-            startActivity(intent)
+            finish()
         }
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.SEND_SMS), 101)
         //Verifixation validité du formulaire
         binding.btnSignUp.setOnClickListener {
             val mail = binding.login.text.toString().trim()
@@ -39,7 +40,7 @@ class SignUp : AppCompatActivity() {
             val name = binding.fullName.text.toString().trim()
             val tel = binding.tel.text.toString().trim()
             val adress = binding.adress.text.toString().trim()
-            val solde: String = "0.0"
+            val solde = "0.0"
 
             if (name.isEmpty()) {
                 binding.fullName.error = "Email est obligatoire"
@@ -65,8 +66,7 @@ class SignUp : AppCompatActivity() {
                 { task: Task<AuthResult> ->
                     if (task.isSuccessful) {
                         val user: FirebaseUser = task.result!!.user!!
-                        Toast.makeText(this@SignUp, "Bravo! register succesfully", Toast.LENGTH_SHORT)
-                            .show()
+                        Toast.makeText(this@SignUp, "Bravo! register succesfully", Toast.LENGTH_SHORT).show()
                         val df: DocumentReference = fStore.collection("Users").document(user.getUid())
                         val new: MutableMap<String, Any> = HashMap()
                         new.put("fullName", name)
@@ -74,16 +74,24 @@ class SignUp : AppCompatActivity() {
                         new.put("tel", tel)
                         new.put("adrese", adress)
                         new.put("solde", solde)
-                        //new.put("search", name.toLowerCase())
                         new.put("isUser",1)
                         new.put("uid",user.uid)
                         df.set(new)
                         finish()
                     }
                 }).addOnFailureListener {
-                    Toast.makeText(this@SignUp, "Il y'a erreur quelque part", Toast.LENGTH_SHORT).show()
+                    binding.progressBar2.setVisibility(View.INVISIBLE)
+                    Toast.makeText(this@SignUp, "Cet email existe déjà", Toast.LENGTH_LONG).show()
                 }
             }
+
         }
+    }
+    //Fonction pour envoyer un méssage à un client
+    private fun sendSMS(phoneNumber: String, message: String) {
+        /*val sentPI: PendingIntent = PendingIntent.getBroadcast(this, 0, Intent("SMS_SENT"), 0)
+        SmsManager.getDefault().sendTextMessage(phoneNumber, null, message, sentPI, null)*/
+        val smsManager = SmsManager.getDefault() as SmsManager
+        smsManager.sendTextMessage(phoneNumber, null, message, null, null)
     }
 }

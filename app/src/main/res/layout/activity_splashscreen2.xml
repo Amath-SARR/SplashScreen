@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     tools:context=".splashscreen">
 
-    <ImageView
+    <!--ImageView
         android:id="@+id/shape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0"
-        tools:ignore="ImageContrastCheck" />
+        tools:ignore="ImageContrastCheck" /-->
 
     <ImageView
         android:id="@+id/imageView2"
@@ -40,11 +39,11 @@
         android:id="@+id/app_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
         android:text="@string/welcome_mybank"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="40sp"
+        android:textSize="20sp"
+        android:layout_marginTop="180dp"
+        android:textColor="@color/statusbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

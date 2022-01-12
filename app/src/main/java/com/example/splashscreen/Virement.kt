@@ -25,66 +25,42 @@ class Virement: AppCompatActivity() {
         binding.retour.setOnClickListener {
             finish();
         }
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.SEND_SMS), 101)
 
         binding.btnVirement.setOnClickListener{
-            Log.w("depot", "Toch vire clicker")
             val numS = binding.numEmetteur.text.toString().trim()
-            Log.w("depot", "$numS")
             val numD = binding.numDestinataire.text.toString().trim()
-            Log.w("depot", "$numD")
             val montant: String = binding.montantVirer.text.toString().trim()
-            val arg = TransactionBancaire().virement(numS,numD,montant)
-            if (arg != null){
-                Toast.makeText(this, "Cher client votre opération a été bien traité! Merci votre fidélité", Toast.LENGTH_SHORT).show()
+            val df = fStore.collection("Users").document(numS)
+            df.get().addOnSuccessListener {
+                val solde = it["solde"].toString()
+                if (solde.toDouble() >= montant.toDouble()){
+                    TransactionBancaire().virement(numS,numD,montant)
+                    Toast.makeText(this, "success", Toast.LENGTH_SHORT).show()
+                    val myMsg = "Cher client votre transfert de $montant FCFA a été bien reussi votre solde actuel est ${solde.toDouble() - montant.toDouble()} FCFA. MyBank vous remerci de votre fidélité Merci votre fidélité"
+                    val myNumber: String = it["tel"].toString()
+                    sendSMS(myNumber, myMsg)
+                }else if (solde.toDouble() == 0.0){ Toast.makeText(this, "Cet compte est vide ", Toast.LENGTH_LONG).show()}
+                else {
+                    Toast.makeText(this, "Error solde insuffisant! ", Toast.LENGTH_SHORT).show()
+                }
             }
-            else{
-                Toast.makeText(this, "Cher client votre solde est insuffissant", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-    fun sendMessage() {
-        val permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS)
-        if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
-            myMessage()
-        } else {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.SEND_SMS),
-                permissionRequest)
-        }
-    }
-
-    private fun myMessage() {
-        val uid = binding.numEmetteur.text.toString().trim()
-        val montant: String = binding.montantVirer.text.toString().trim()
-        val df = fStore.collection("Users").document(uid)
-
-        df.get().addOnSuccessListener {
-
-            val solde: String = it["solde"].toString()
-            val myMsg: String = "Cher client votre vireement de $montant a été bien traité votre solde actuel est $solde MyBank vous remerci de votre fidélité!"
-            val myNumber: String = it["tel"].toString()
-            if (myNumber == "" || myMsg == "") {
-                Toast.makeText(this, "Field cannot be empty", Toast.LENGTH_SHORT).show()
-            } else {
-                if (TextUtils.isDigitsOnly(myNumber)) {
-                    val smsManager: SmsManager = SmsManager.getDefault()
-                    smsManager.sendTextMessage(myNumber, null, myMsg, null, null)
-                    Toast.makeText(this, "Message Sent", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(this, "Please the number is incorrect ", Toast.LENGTH_SHORT).show()
+            val dff = fStore.collection("Users").document(numD)
+            dff.get().addOnSuccessListener {
+                val soldes = it["solde"].toString()
+                if (soldes.toDouble() >= montant.toDouble()){
+                    val myMsg = "Cher client vous venez de recevoir un montant de $montant votre solde actuel est ${soldes.toDouble() + montant.toDouble()} FCFA"
+                    val myNumber = it["tel"].toString()
+                    sendSMS(myNumber, myMsg)
                 }
             }
         }
     }
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults:
-    IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == permissionRequest) {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                myMessage();
-            } else {
-                Toast.makeText(this, "You don't have required permission to send a message",
-                    Toast.LENGTH_SHORT).show();
-            }
-        }
+    //Fonction pour envoyer un méssage à un client
+    private fun sendSMS(phoneNumber: String, message: String) {
+        /*val sentPI: PendingIntent = PendingIntent.getBroadcast(this, 0, Intent("SMS_SENT"), 0)
+        SmsManager.getDefault().sendTextMessage(phoneNumber, null, message, sentPI, null)*/
+        val smsManager = SmsManager.getDefault() as SmsManager
+        smsManager.sendTextMessage(phoneNumber, null, message, null, null)
     }
 }

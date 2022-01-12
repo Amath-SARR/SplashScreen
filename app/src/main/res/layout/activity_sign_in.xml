@@ -27,6 +27,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+
+
                 <ImageView
                     android:id="@+id/shape"
                     android:layout_width="wrap_content"
@@ -66,12 +68,12 @@
                         android:hint="@string/login"
                         android:inputType="textEmailAddress"
                         android:minHeight="50dp"
-                        android:paddingStart="30dp" />
+                        android:paddingStart="30dp"
+                        tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         app:passwordToggleEnabled="true">
 
 
@@ -144,12 +146,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:visibility="invisible" />
-
                     </LinearLayout>
-
-
                 </LinearLayout>
-
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

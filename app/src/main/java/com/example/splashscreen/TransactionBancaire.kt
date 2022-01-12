@@ -1,6 +1,7 @@
 package com.example.splashscreen
 
 import android.util.Log
+import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 
 open class TransactionBancaire {
@@ -23,12 +24,15 @@ open class TransactionBancaire {
         val df = fStore.collection("Users").document(uid)
         df.get().addOnSuccessListener {
             val solde = it["solde"].toString()
-            if(solde.toDouble() >= montant.toDouble()) {
+            Log.e("Tag: ", "${solde}")
+            Log.e("Tag: ", "${montant}")
+            if(solde >= montant) {
+                Log.e("Tag: ", "solde inssuffisant")
                 val balance = soustraction(solde.toDouble(),  montant)
                 val new: MutableMap<String, Any> = HashMap()
                 new.put("solde", balance.toString())
                 df.update(new)
-                //finish()
+
             }
         }
     }

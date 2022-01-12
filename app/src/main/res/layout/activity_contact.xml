@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Contact">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@color/statusbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/retour"
+                    android:src="@drawable/ic_retour"/>
+            </FrameLayout>
+            <ImageView
+                android:id="@+id/bank"
+                android:layout_width="214dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bienvenu" />
+
+            <!--EditText: Input the recipient-->
+            <EditText
+                android:id="@+id/recipientEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="ehamath.sarr@univ-thies.sn" />
+
+            <!--EditText: Input the subject of email-->
+            <EditText
+                android:id="@+id/subjectEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/white"
+                android:hint="Subject"
+                android:inputType="text|textCapSentences"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+            <!--EditText: Input the message-->
+            <EditText
+                android:id="@+id/messageEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="start"
+                android:hint="Enter message here..."
+                android:inputType="text|textCapSentences"
+                android:minHeight="150dp"
+                android:padding="10dp" />
+
+            <!--Button:   Launch existing email clients to send email-->
+            <Button
+                android:id="@+id/sendEmailBtn"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="send Email" />
+
+
+            <!--TextView
+            android:id="@+id/textView"
+            android:layout_width="361dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Email: ehamath.sarr@univ-thies.sn Pour tous désagrément technique"
+            android:textSize="20dp"
+            android:textStyle="bold" /-->
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:text="Telephone: "
+                android:textColor="@color/teal_200"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="33 309 98 90 / 77 090 01 01 / 70 404 0404"
+                android:gravity="center" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

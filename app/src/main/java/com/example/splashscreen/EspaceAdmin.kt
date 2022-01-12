@@ -69,6 +69,11 @@ class EspaceAdmin : AppCompatActivity() {
                     val intent = Intent(this, Virement::class.java)
                     startActivity(intent)
                     return@setOnNavigationItemSelectedListener true
+                }
+                R.id.contact -> {
+                    val intent = Intent(this, Contact::class.java)
+                    startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
 
                 }
                 else -> false
